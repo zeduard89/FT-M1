@@ -3,8 +3,9 @@
 function BinarioADecimal(num) {
       //Sumatorio del binario "num" pero invertido
       // digito del binario * 2 ** indice alrevez (num invertido)
+   
    var binario = num.split("").reverse().join("");
-
+   
    var suma = 0;
 
    for (let i=0 ; i < binario.length; i++){
@@ -31,6 +32,33 @@ function DecimalABinario(num) {
 
   return binario;
 }
+
+/*
+ function DecimalABinario(num){
+   let bin = [];    //creo un array vacio
+   while(num>1){
+      bin.push(num%2);    //pusheo en el array el Modulo
+      num = Math.floor(num/2)  //redefino num para repetir el while
+   }
+   bin.push(num);   //al finalizar, me quedaria el ultimo numero en num y lo agrego al array
+   return bin.reverse().join("");   //como con binario empiezo al revez uso reverse y lo uno con join
+ }
+*/
+
+/*
+ function DecimalABinario(num){
+   let bin = [];    //creo un array vacio
+   while(num>1){
+      bin.unshift(num%2);    //pusheo en el array el Modulo
+      num = Math.floor(num/2)  //redefino num para repetir el while
+   }
+   bin.unshift(num);   //al finalizar, me quedaria el ultimo numero en num y lo agrego al array
+   return bin.join("");   //como con binario empiezo al revez uso reverse y lo uno con join
+ }
+*/
+
+
+
 
 module.exports = {
    BinarioADecimal,
